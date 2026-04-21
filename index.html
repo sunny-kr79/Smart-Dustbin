@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Dustbin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <div class="header">
+            <h1>🗑️ Smart Dustbin Monitoring System</h1>
+            <div class="admin-info">
+                <span id="adminEmail">admin@example.com</span>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+        
+        <!-- Main Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Lid Open Duration</h3>
+                <div class="stat-value" id="lidTime">0</div>
+                <div class="stat-unit">seconds</div>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Total Waste</h3>
+                <div class="stat-value" id="totalWaste">0</div>
+                <div class="stat-unit">kg</div>
+            </div>
+        </div>
+        
+        <!-- Waste Type Display -->
+        <div class="waste-display">
+            <h2>Current Waste Type</h2>
+            <div class="waste-type-card" id="wasteTypeDisplay">
+                <div class="waste-icon">🔄</div>
+                <div class="waste-text">Waiting for sensor...</div>
+            </div>
+        </div>
+        
+        <!-- Fill Level Section -->
+        <div class="fill-section">
+            <h2>Dustbin Fill Status</h2>
+            <div class="fill-container">
+                <div class="fill-bar" id="fillBar">
+                    <span id="fillPercent">0</span>%
+                </div>
+            </div>
+            <div class="fill-status" id="fillStatus"></div>
+        </div>
+        
+        <!-- Waste Details -->
+        <div class="waste-grid">
+            <div class="waste-card dry">
+                <h3>🗑️ Dry Waste</h3>
+                <div class="waste-amount" id="dryWaste">0</div>
+                <div class="waste-unit">kg</div>
+                <div class="status-badge" id="dryStatus">Normal</div>
+            </div>
+            
+            <div class="waste-card wet">
+                <h3>💧 Wet Waste</h3>
+                <div class="waste-amount" id="wetWaste">0</div>
+                <div class="waste-unit">kg</div>
+                <div class="status-badge" id="wetStatus">Normal</div>
+            </div>
+        </div>
+        
+        <!-- Real-time Log -->
+        <div class="log-section">
+            <h3>📋 Real-time Activity Log</h3>
+            <div class="log-container" id="activityLog">
+                <div class="log-entry">System started...</div>
+            </div>
+        </div>
+        
+        <!-- Last Update -->
+        <div class="update-time">
+            Last Update: <span id="timestamp">-</span>
+        </div>
+    </div>
+    
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>
